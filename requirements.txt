@@ -1,6 +1,6 @@
 Django==4.2.5
 psycopg==3.1.10
-django-filter==23.2
+django-filter==23.3
 django-oauth-toolkit==2.3.0
 djangorestframework==3.14.0
 django-cors-headers==4.2.0
@@ -25,3 +25,4 @@ drf-yasg==1.21.7
 openapi==1.1.0
 PyYAML==6.0.1
 daphne==4.0.0
+setuptools==68.2.2
