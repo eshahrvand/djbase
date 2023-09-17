@@ -1,7 +1,7 @@
-FROM python:3.9-alpine3.14
+FROM python:3.11.5-alpine3.18
 
-LABEL org.opencontainers.image.authors="heman.1682@gmail.com"
-LABEL version="0.1"
+LABEL org.opencontainers.image.authors="sajjad.meshki@gmail.com"
+LABEL version="0.3"
 
 
 ENV PYTHONUNBUFFERED 1
@@ -17,6 +17,8 @@ RUN apk add --update --no-cache postgresql-client
 RUN apk add --update  postgresql-client build-base postgresql-dev musl-dev linux-headers libffi-dev libxslt-dev libxml2-dev
 RUN    apk add --update --no-cache --virtual .tmp-deps \
         build-base postgresql-dev musl-dev linux-headers libffi-dev libjpeg zlib-dev jpeg-dev gcc musl-dev libxslt libxml2
+RUN apk add --upgrade py3-unicodecsv
 
 
+RUN /py/bin/python -m pip install --upgrade pip
 RUN /py/bin/pip install -r /common-requirements.txt
