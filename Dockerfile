@@ -1,7 +1,7 @@
-FROM python:3.11.5-alpine3.18
+FROM python:3.13.3-alpine3.21
 
 LABEL org.opencontainers.image.authors="sajjad.meshki@gmail.com"
-LABEL version="0.3"
+LABEL version="0.6"
 
 
 ENV PYTHONUNBUFFERED 1
